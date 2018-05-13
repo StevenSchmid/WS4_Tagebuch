@@ -8,7 +8,7 @@ import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddPlacePage } from "../pages/add-place/add-place";
@@ -49,7 +49,8 @@ import { PlacesService } from "../services/places";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PlacesService
+    PlacesService,
+    AndroidPermissions
   ]
 })
 export class AppModule {

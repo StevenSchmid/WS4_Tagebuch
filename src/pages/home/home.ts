@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { ModalController } from 'ionic-angular';
 import { AddPlacePage } from "../add-place/add-place";
 import { Place } from "../../models/place";
@@ -15,8 +15,16 @@ export class HomePage implements OnInit {
   places: Place[] = [];
 
   constructor(private modalCtrl: ModalController,
-              private placesService: PlacesService) {
+              private placesService: PlacesService,
+            private androidPermissions: AndroidPermissions) {
 
+          androidPermissions.requestPermissions(
+           [
+             androidPermissions.PERMISSION.CAMERA,
+             androidPermissions.PERMISSION.ACCESS_FINE_LOCATION,
+             androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION,
+           ]
+         );
   }
 
   ngOnInit() {
