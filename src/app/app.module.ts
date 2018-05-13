@@ -31,7 +31,7 @@ import { PlacesService } from "../services/places";
     IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAOGymqa7HezIpq9lfv8GM9GtQ5fO-ZW9A'
+      apiKey: 'AIzaSyC50gbEStwCC8gfbYc8t6Jq9rwcyckE_Jc'
     })
   ],
   bootstrap: [IonicApp],
