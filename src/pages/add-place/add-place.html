@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Add a Place</ion-title>
+    <ion-title>Neuer Eintrag</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,7 +12,7 @@
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <ion-list>
       <ion-item>
-        <ion-label fixed>Title</ion-label>
+        <ion-label fixed>Berg</ion-label>
         <ion-input
           type="text"
           placeholder="Beautiful church..."
@@ -21,7 +21,7 @@
           required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label floating>Short Description</ion-label>
+        <ion-label floating>Tagebuch Eintrag</ion-label>
         <ion-textarea
           name="description"
           ngModel
