@@ -15,7 +15,7 @@
         <ion-label fixed>Berg</ion-label>
         <ion-input
           type="text"
-          placeholder="Beautiful church..."
+          placeholder="Pilatus."
           name="title"
           ngModel
           required></ion-input>
@@ -69,7 +69,7 @@
       </ion-row>
       <ion-row>
         <ion-col text-center>
-          <h5>Take a Photo!</h5>
+          <h5>Mach ein Foto</h5>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -82,7 +82,7 @@
             type="button"
             (click)="onTakePhoto()">
             <ion-icon name="camera"></ion-icon>
-            Open Camera
+            Gipfelfoto machen
           </button>
         </ion-col>
       </ion-row>
@@ -99,7 +99,7 @@
             block
             type="submit"
             [disabled]="!f.valid || !locationIsSet || imageUrl == ''">
-            Add this Place
+            Eintragen
           </button>
         </ion-col>
       </ion-row>
