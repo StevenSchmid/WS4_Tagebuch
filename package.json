@@ -47,6 +47,8 @@
     "typescript": "~2.2.1"
   },
   "cordovaPlugins": [
+    "cordova-plugin-android-permissions",
+    "cordova-plugin-file",
     "cordova-plugin-whitelist",
     "cordova-plugin-console",
     "cordova-plugin-statusbar",
