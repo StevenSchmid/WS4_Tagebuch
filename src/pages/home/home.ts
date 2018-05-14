@@ -5,6 +5,7 @@ import { AddPlacePage } from "../add-place/add-place";
 import { Place } from "../../models/place";
 import { PlacesService } from "../../services/places";
 import { PlacePage } from "../place/place";
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,8 @@ export class HomePage implements OnInit {
   addPlacePage = AddPlacePage;
   places: Place[] = [];
 
-  constructor(private modalCtrl: ModalController,
+  constructor(public navCtrl: NavController,
+              private modalCtrl: ModalController,
               private placesService: PlacesService,
             private androidPermissions: AndroidPermissions) {
 

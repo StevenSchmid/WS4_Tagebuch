@@ -16,6 +16,10 @@ import { PlacePage } from "../pages/place/place";
 import { SetLocationPage } from "../pages/set-location/set-location";
 import { AgmCoreModule } from "angular2-google-maps/core";
 import { PlacesService } from "../services/places";
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+import { TabsPage } from '../pages/tabs/tabs';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { PlacesService } from "../services/places";
     HomePage,
     AddPlacePage,
     PlacePage,
-    SetLocationPage
+    SetLocationPage,
+    ContactPage,
+    AboutPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,10 @@ import { PlacesService } from "../services/places";
     HomePage,
     AddPlacePage,
     PlacePage,
-    SetLocationPage
+    SetLocationPage,
+    ContactPage,
+    AboutPage,
+    TabsPage
   ],
   providers: [
     File,
