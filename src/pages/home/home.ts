@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
-import { ModalController } from 'ionic-angular';
+import { ModalController, ToastController } from 'ionic-angular';
 import { AddPlacePage } from "../add-place/add-place";
 import { Place } from "../../models/place";
 import { PlacesService } from "../../services/places";
@@ -18,7 +18,8 @@ export class HomePage implements OnInit {
   constructor(public navCtrl: NavController,
               private modalCtrl: ModalController,
               private placesService: PlacesService,
-            private androidPermissions: AndroidPermissions) {
+            private androidPermissions: AndroidPermissions,
+          private toastCtrl: ToastController,) {
 
           androidPermissions.requestPermissions(
            [
@@ -27,6 +28,7 @@ export class HomePage implements OnInit {
              androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION,
            ]
          );
+
   }
 
   ngOnInit() {
@@ -34,6 +36,8 @@ export class HomePage implements OnInit {
       .then(
         (places: Place[]) => this.places = places
       );
+
+
   }
 
   ionViewWillEnter() {

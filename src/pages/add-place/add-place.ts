@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from "@angular/forms";
-import { ModalController, LoadingController, ToastController } from "ionic-angular";
+import { ModalController, LoadingController, ToastController, ViewController } from "ionic-angular";
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera';
 import { File, Entry, FileError } from '@ionic-native/file';
@@ -26,6 +26,7 @@ export class AddPlacePage {
   constructor(private modalCtrl: ModalController,
               private loadingCtrl: LoadingController,
               private toastCtrl: ToastController,
+              private viewCtrl: ViewController,
               private placesService: PlacesService,
               private geolocation: Geolocation,
               private camera: Camera,
@@ -42,6 +43,7 @@ export class AddPlacePage {
     };
     this.imageUrl = '';
     this.locationIsSet = false;
+    this.viewCtrl.dismiss();
   }
 
   onOpenMap() {
