@@ -1,16 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons end>
-      <button ion-button icon-only [navPush]="addPlacePage">
-        <ion-icon name="settings"></ion-icon>
-      </button>
-    </ion-buttons>
     <ion-title>
-      Profil
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
 
   <ion-content>
-<ion-img width="80" height="80" src="settings/profilbild.jpg"></ion-img>
+    <ion-item>
+        <ion-label>Notifications?</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+  </ion-item>
+  <ion-item>
+      <ion-label>GPS</ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+</ion-item>
 </ion-content>
